@@ -4,7 +4,6 @@ import Courses from './DoubtAccept';
 import Teachers from "./Teachers";
 import DoubtAccept from "./DoubtAccept";
 import Navbar from "./Navbar";
-import bg2 from "../images/bg1.mp4";
 import Lottie from 'react-lottie-player'
 import stud from "../assets/studDoubt.json"
 import checking from "../assets/checking.json"

@@ -8,6 +8,7 @@ const TeachSign = require('./models/signIn')
 const StudentSign = require('./models/signStud');
 const Information = require('./models/Information')
 const Chat = require('./models/Chat');
+const path = require("path");
 
 const app = express();
 
@@ -44,6 +45,25 @@ const teacherRoutes = require('./routes/teacherRoutes');
 // Use routes
 app.use('/student', studentRoutes);
 app.use('/teacher', teacherRoutes);
+
+
+// --------------------------deployment------------------------------
+
+const __dirname1 = path.resolve();
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname1, "./client/dist")));
+
+  app.get("*", (req, res) =>
+    res.sendFile(path.join(__dirname1, "./client/dist", "index.html"))
+  );
+} else {
+  app.get("/", (req, res) => {
+    res.send("API is running..");
+  });
+}
+
+// --------------------------deployment------------------------------
 
 
 const port = 3000;
