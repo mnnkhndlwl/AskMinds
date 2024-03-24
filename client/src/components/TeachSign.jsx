@@ -41,7 +41,7 @@ const TeachSign = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/teacher/sign', form);
+      const response = await axios.post('https://askminds.onrender.com/teacher/sign', form);
       const { message,insertedId ,token} = response.data;
       setToken(token)
       setMessage(message);
