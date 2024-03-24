@@ -41,7 +41,7 @@ const TeachSign = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/teacher/sign', form);
+      const response = await axios.post('https://askminds.onrender.com/teacher/sign', form);
       const { message,insertedId ,token} = response.data;
       setToken(token)
       setMessage(message);
@@ -125,14 +125,14 @@ const TeachSign = () => {
     <div className="signteach ">
       <Navbar />
       <div className="flex justify-center  login-main">
-        <div className="flex  justify-center items-center h-[30rem] teach-div w-[100%] opaci">
+        <div className="flex  justify-center items-center min-h-[30rem] h-auto teach-div w-[100%] opaci">
           <form
             onSubmit={handleSubmit}
             className="flex  justify-center items-center h-[30rem] teach-div w-[100%]"
           >
             <div className="flex flex-col justify-center items-center mt-[5%]  teach-form w-[50%] px-3 h-[100%] relative rounded-xl shadow-lg log-in">
-              <img src={teacher} className="w-[8rem]" />
-              <h1 className="text-2xl text-white mt-3">Sign In As Teacher</h1>
+              <img src={teacher} className="w-[40%]" />
+              <h1 className="text-2xl text-white mt-3 text-center">Sign In As Teacher</h1>
               <div className="w-[100%] relative flex justify-center my-5 gap-5">
                 <input
                   type="text "
@@ -173,7 +173,7 @@ const TeachSign = () => {
                 Sign In
               </button>
               <Link to="/logteach">
-                <h1 className="my-4 text-white font-bold">
+                <h1 className="my-4 text-white font-bold text-center">
                   Already have an account?
                 </h1>
               </Link>
@@ -187,9 +187,9 @@ const TeachSign = () => {
             className="flex  justify-center items-center h-[30rem] teach-div w-[100%]"
           >
             <div className="flex flex-col justify-center items-center mt-[5%]  teach-form w-[50%] px-3 h-[100%] relative rounded-xl shadow-lg ">
-              <img src={student} className="w-[16rem]" />
+              <img src={student} className="w-[15rem]" />
 
-              <h1 className="text-2xl text-white mt-5">Sign In As Student</h1>
+              <h1 className="text-2xl text-white mt-5 text-center">Sign In As Student</h1>
               <div className="w-[100%] relative flex justify-center my-5 gap-5">
                 <input
                   type="text "
@@ -230,7 +230,7 @@ const TeachSign = () => {
                 Sign In
               </button>
               <Link to="/logstud">
-                <h1 className="my-4 text-white font-bold">
+                <h1 className="my-4 text-white font-bold text-center">
                   Already have an account?
                 </h1>
               </Link>

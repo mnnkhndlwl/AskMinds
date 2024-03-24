@@ -71,7 +71,7 @@ const Landing = () => {
         <div className="flex justify-between land-1  h-[80vh] ">
           <div className="w-[50%] flex items-center justify-center l1div">
             <div className="flex flex-col  justify-center w-[70%] gap-10 l1in">
-              <h1 className="text-6xl text-white font-bold">
+              <h1 className="text-6xl text-white font-bold land-head">
                 AskMinds : The Ultimate Doubt Solving Platform
               </h1>
               <h2 className="text-white text-xl ">

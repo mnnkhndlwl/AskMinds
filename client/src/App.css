@@ -570,3 +570,12 @@ td {
     height: 127vh;
   } */
 }
+@media  screen and (min-width: 650px) and  (max-width:1170px){
+  .l1div{
+    width: 60%;
+    position: relative;
+  }
+  .land-head{
+    font-size: 3rem; 
+  }
+}
